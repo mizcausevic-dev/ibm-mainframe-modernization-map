@@ -43,7 +43,7 @@ const html = `<!doctype html>
     h1{max-width:980px;margin:18px 0;font-size:clamp(44px,8vw,104px);line-height:.91;letter-spacing:-.06em}
     .lede{max-width:780px;color:var(--muted);font-size:clamp(18px,2.2vw,24px);line-height:1.55}
     .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}
-    .metric{border:1px solid rgba(255,255,255,.09);border-radius:18px;background:rgba(255,255,255,.04);padding:20px}
+    .metric,.proof-card{border:1px solid rgba(255,255,255,.09);border-radius:18px;background:rgba(255,255,255,.04);padding:20px}
     .metric strong{display:block;font-size:34px}.metric span{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.12em}
     .section{margin-top:28px;border:1px solid var(--line);border-radius:28px;background:rgba(12,22,37,.78);padding:clamp(22px,3vw,34px)}
     h2{margin:0 0 18px;font-size:clamp(30px,4vw,54px);line-height:1;letter-spacing:-.04em}
@@ -52,8 +52,9 @@ const html = `<!doctype html>
     .top{display:flex;justify-content:space-between;color:var(--cyan);font:800 12px/1 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.14em}.top strong{color:var(--mint);font-size:30px;letter-spacing:0}
     h3{margin:16px 0 10px;font-size:25px;line-height:1.08}p{color:var(--muted);line-height:1.55}.chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.chips span{border:1px solid rgba(39,216,244,.25);border-radius:999px;padding:8px 10px;color:var(--cyan);font:700 12px/1 ui-monospace,SFMono-Regular,Consolas,monospace}
     dl{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}dt{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.1em}dd{margin:4px 0 0;font-weight:800}.action{color:var(--text);border-top:1px solid rgba(255,255,255,.08);padding-top:14px}
+    .proof{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:18px}.proof-card h3{margin:8px 0 10px}.proof-card a{color:var(--cyan);text-decoration:none}
     footer{color:var(--muted);padding-top:24px;font-size:14px}
-    @media(max-width:760px){main{padding:28px 0}.metrics,.grid{grid-template-columns:1fr}}
+    @media(max-width:760px){main{padding:28px 0}.metrics,.grid,.proof{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -73,6 +74,14 @@ const html = `<!doctype html>
       <h2>Modernization register</h2>
       <p><strong>Primary recommendation:</strong> ${map.summary.primaryRecommendation}</p>
       <div class="grid">${cards}</div>
+      <div class="proof" aria-label="Product depth and shared pattern">
+        <article class="proof-card"><div class="eyebrow">Product purpose</div><h3>What this product does</h3><p>Turns COBOL, JCL, DB2, API coverage, batch windows, dependencies, and run-cost pressure into a modernization sequence leaders can prioritize.</p></article>
+        <article class="proof-card"><div class="eyebrow">Buyer lens</div><h3>Why executives care</h3><p>Modernization budget gets wasted when every workload is framed as a rewrite. This page separates contain, wrap, refactor, and rebuild candidates using evidence instead of slogans.</p></article>
+        <article class="proof-card"><div class="eyebrow">Value architecture</div><h3>How it turns into action</h3><p>The map translates technical estate pressure into funding posture: which workload should move first, what risk remains, and where run-cost reduction or API enablement is credible.</p></article>
+        <article class="proof-card"><div class="eyebrow">Technical proof</div><h3>What reviewers can inspect</h3><p>The repo keeps typed scoring, synthetic workload fixtures, deterministic static rendering, and CI checks together without exposing production mainframe inventories.</p></article>
+        <article class="proof-card"><div class="eyebrow">What these repos have in common</div><h3>Platform complexity becomes board-ready operating proof.</h3><p>Each repo names a buyer pain, exposes an evidence model, produces a reusable decision surface, and keeps the demo boundary safe with synthetic data.</p></article>
+        <article class="proof-card"><div class="eyebrow">Interlinks</div><h3>Where this fits</h3><p><a href="https://portfolio.kineticgain.com/">Portfolio</a> · <a href="https://kineticgain.com/">Kinetic Gain</a> · <a href="https://github.com/mizcausevic-dev/ibm-mainframe-modernization-map">GitHub</a></p></article>
+      </div>
     </section>
     <footer>IBM Mainframe Modernization Map · synthetic proof surface · no production workload data</footer>
   </main>
